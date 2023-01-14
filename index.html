@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #heroesHere {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5%;
+            margin: 10%;
+
+        }
+
+        .hero {
+            background-color: honeydew;
+            padding: 5%;
+            text-align: center;
+            border: 2px solid rgba(21, 21, 21, 0.408);
+        }
+
+        .hero img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .heroRate {
+            display: flex;
+            justify-content: space-around;
+            gap: 5%;
+            margin: 10%;
+            
+        }
+    </style>
+</head>
+
+
+
+
+
+<body>
+    <div id="heroesHere">
+
+</div>
+
+<div class="heroRate">
+
+    <div>
+<div>Оцените Бэтмена</div>
+<div>
+    <select id="rateBatman">
+        <option hidden>Ваша оценка:</option>
+        <option value="1">1 </option>
+        <option value="2">2 </option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 </option>
+    </select>
+</div>
+</div>
+<div>
+    <div>Оцените Супермена</div>
+    <div>
+        <select id="rateSuperman">
+            <option hidden>Ваша оценка:</option>
+            <option value="1">1 </option>
+            <option value="2">2 </option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 </option>
+        </select>
+    </div>
+    </div>
+    <div>
+        <div>Оцените Железного человека</div>
+        <div>
+            <select id="rateIronman">
+                <option hidden>Ваша оценка:</option>
+                <option value="1">1 </option>
+                <option value="2">2 </option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 </option>
+            </select>
+        </div>
+        </div>
+
+</div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

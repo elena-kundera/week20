@@ -69,11 +69,9 @@ localStorage.setItem('ironmanRated', ironmanRated);
 });
 
 
-// Во втором задании сделала загрузку данных пользователей с сервера по клику на кнопку,
+
+// 2. Во втором задании сделала загрузку данных пользователей с сервера по клику на кнопку,
 // Надеюсь это подойдет
-
-
-
 
 
 const button = document.querySelector("#showUsers");
@@ -107,3 +105,10 @@ function getUsers(arg) {
 
 
 
+
+
+fetch('http://www.boredapi.com/api/activity?type=recreational')
+.then(response => response.json())
+.then(data => console.log(data))
+
+//скрин пришлю отдельно

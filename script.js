@@ -67,3 +67,43 @@ localStorage.setItem('batmanRated', batmanRated);
 localStorage.setItem('supermanRated', supermanRated);
 localStorage.setItem('ironmanRated', ironmanRated);
 });
+
+
+// Во втором задании сделала загрузку данных пользователей с сервера по клику на кнопку,
+// Надеюсь это подойдет
+
+
+
+
+
+const button = document.querySelector("#showUsers");
+
+button.addEventListener("click", function
+(event) {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => {
+        getUsers(data)
+    })
+})
+;
+
+function getUsers(arg) {
+    const container = document.querySelector("#users");
+    arg.forEach((item) => {
+        const userContainer = document.createElement('div');
+        container.append(userContainer);
+        userContainer.style.padding = '3%';
+        const h2 = document.createElement('h2');
+        h2.innerHTML = item.name;
+        const h3 = document.createElement('h3');
+        h3.innerHTML = item.email;
+        const p = document.createElement('p');
+        p.innerHTML = item.website;
+        userContainer.append(h2,h3,p)
+    })
+};
+
+
+
